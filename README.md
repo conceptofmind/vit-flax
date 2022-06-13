@@ -39,6 +39,13 @@ print(f"Number of parameters in Flax model: {n_params_flax}")
 ## Acknowledgements:
 - [Dr. Phil Wang](https://github.com/lucidrains/)
 
+## Todo
+
+- [x] Build model
+- [ ] Implement pip installer
+- [ ] Implement huggingface streaming dataloaders
+- [ ] Implement training scripy
+
 ## Author:
 - Enrico Shippole
 
