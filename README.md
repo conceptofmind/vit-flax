@@ -20,7 +20,6 @@ v = ViT(
     mlp_dim = 2048,
     dropout = 0.1,
     emb_dropout = 0.1,
-    key = key
 )
 
 init_rngs = {'params': jax.random.PRNGKey(1), 
@@ -30,6 +29,11 @@ init_rngs = {'params': jax.random.PRNGKey(1),
 params = v.init(init_rngs, img)
 output = v.apply(params, img, rngs=init_rngs)
 print(output.shape) # (1, 1000)
+
+n_params_flax = sum(
+    jax.tree_leaves(jax.tree_map(lambda x: np.prod(x.shape), params))
+)
+print(f"Number of parameters in Flax model: {n_params_flax}")
 ```
 
 ## Acknowledgements:
