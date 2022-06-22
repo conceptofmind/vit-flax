@@ -4,6 +4,9 @@
 
 Implementation of <a href="https://openreview.net/pdf?id=YicbFdNTTy">Vision Transformer</a>, a simple way to achieve SOTA in vision classification with only a single transformer encoder, in JAX Flax.
 
+## Acknowledgement:
+I have been greatly inspired by the brilliant code of [Dr. Phil 'Lucid' Wang](https://github.com/lucidrains). Please check out his [open-source implementations](https://github.com/lucidrains) of multiple different transformer architectures and [support](https://github.com/sponsors/lucidrains) his work.
+
 ### Usage
 ```python
 key = jax.random.PRNGKey(0)
@@ -35,9 +38,6 @@ n_params_flax = sum(
 )
 print(f"Number of parameters in Flax model: {n_params_flax}")
 ```
-
-## Acknowledgements:
-- [Dr. Phil Wang](https://github.com/lucidrains/)
 
 ## Todo
 
