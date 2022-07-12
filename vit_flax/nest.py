@@ -210,8 +210,7 @@ if __name__ == '__main__':
     )
     
     init_rngs = {'params': jax.random.PRNGKey(1), 
-                'dropout': jax.random.PRNGKey(2), 
-                'emb_dropout': jax.random.PRNGKey(3)}
+                'dropout': jax.random.PRNGKey(2)}
 
     params = v.init(init_rngs, img)
     output = v.apply(params, img, rngs=init_rngs)
